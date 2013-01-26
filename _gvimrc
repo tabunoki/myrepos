@@ -1,0 +1,46 @@
+
+" カラースキーマ
+:colorscheme desert
+
+" 縦幅 デフォルトは24
+set lines=40
+
+" 横幅 デフォルトは80
+set columns=120
+
+" ツールバーを削除
+set guioptions-=T
+
+" メニューを削除
+set guioptions-=m
+
+" タブページのラインを常に表示
+set showtabline=2
+
+" フォントとフォントサイズ
+set guifont=MS_Gothic:h10:cSHIFTJIS
+
+set autoindent
+set smartindent
+set smarttab
+
+" タブを表示するときの幅
+set tabstop=4
+
+" タブを挿入するときの幅
+set shiftwidth=4
+
+" タブをタブとして扱う(スペースに展開しない)
+set noexpandtab
+
+" 
+set softtabstop=0
+
+" バックファイルをつくらない
+set nobackup
+
+" 行数を表示させる
+set number
+
+set ruler
+set title
