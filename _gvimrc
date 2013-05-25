@@ -3,7 +3,7 @@
 :colorscheme desert
 
 " 縦幅 デフォルトは24
-set lines=40
+set lines=36
 
 " 横幅 デフォルトは80
 set columns=120
@@ -20,20 +20,23 @@ set showtabline=2
 " フォントとフォントサイズ
 set guifont=MS_Gothic:h10:cSHIFTJIS
 
+" オートインデント
 set autoindent
+
+" スマートインデント
 set smartindent
+
+" スマートタブ
 set smarttab
 
-" タブを表示するときの幅
-set tabstop=4
+" タブを表示するときの幅 : tabstop
+" タブを挿入するときの幅 : shiftwidth
+" タブをスペースで入力 : expandtab
+au BufNewFile,BufRead *.*  set tabstop=4 shiftwidth=4 expandtab
+au BufNewFile,BufRead *.rb set tabstop=2 shiftwidth=2 expandtab
 
-" タブを挿入するときの幅
-set shiftwidth=4
-
-" タブをタブとして扱う(スペースに展開しない)
-set noexpandtab
-
-" 
+" タブを挿入するときの空白数
+" 0 の場合は tabstop に依存する
 set softtabstop=0
 
 " バックファイルをつくらない
@@ -42,5 +45,5 @@ set nobackup
 " 行数を表示させる
 set number
 
-set ruler
-set title
+" クリップボードを使用してコピー/ペーストを行う
+set clipboard=unnamed
